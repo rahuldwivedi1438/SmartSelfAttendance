@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MarkAttendanceActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/bar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lecturedate_chooser"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/form_border"
+            android:gravity="center_vertical"
+            android:onClick="setDate"
+            android:padding="10dp"
+            android:spinnerMode="dialog"
+            android:text="Select Date"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+             />
+
+        <Spinner
+            android:id="@+id/lecturetime_chooser"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/form_border"
+            android:spinnerMode="dialog" />
+
+        <TextView
+            android:id="@+id/section_chooser"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:background="@drawable/form_border"
+            android:text="Section"/>
+
+        <Spinner
+            android:id="@+id/subject_chooser"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/form_border"
+            android:spinnerMode="dialog" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_otp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/login_btn_background"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="sans-serif-medium"
+                android:onClick="otpClicked"
+                android:paddingHorizontal="30dp"
+                android:text="Enter OTP"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_qr"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/login_btn_background"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="sans-serif-medium"
+                android:onClick="qrClicked"
+                android:paddingHorizontal="30dp"
+                android:text="Scan QR"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/otp_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/txtotp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/form_border"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:hint="Enter OTP"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/login_btn_background"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="sans-serif-medium"
+                android:onClick="submitClicked"
+                android:paddingHorizontal="30dp"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_useless"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</LinearLayout>

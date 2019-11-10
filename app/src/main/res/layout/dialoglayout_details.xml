@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/gradient_login_background"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/editTxtID"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/login_edittext_background"
+        android:layout_margin="30dp"
+        android:hint="Enter ID"
+        android:gravity="center"
+        android:textColorHint="@color/white"
+        android:fontFamily="sans-serif-light"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:drawablePadding="5dp"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_go_back"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/layout1"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/login_btn_background"
+            android:fontFamily="sans-serif-medium"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:layout_margin="5dp"
+            android:text="Go Back"
+            android:onClick="resetClicked"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/layout1"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/login_btn_background"
+            android:fontFamily="sans-serif-medium"
+            android:paddingLeft="50dp"
+            android:layout_margin="5dp"
+            android:paddingRight="50dp"
+            android:text="Continue"
+            android:onClick="resetClicked"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

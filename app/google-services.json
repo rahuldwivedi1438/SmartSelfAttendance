@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "715619318132",
+    "firebase_url": "https://smart-self-attendance.firebaseio.com",
+    "project_id": "smart-self-attendance",
+    "storage_bucket": "smart-self-attendance.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715619318132:android:62a65d4fe38e9449281421",
+        "android_client_info": {
+          "package_name": "com.lpu.capstone.smartselfattendance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "715619318132-k1qc52ibhpf187vhjvlq67rlf7uvlcri.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lpu.capstone.smartselfattendance",
+            "certificate_hash": "c8f259233427656529fa7dc15dbf9155dd2f16a0"
+          }
+        },
+        {
+          "client_id": "715619318132-094adv3v7u4u9truieie42fn0jrvfsdg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCWj5Xy0ztlfxTJ6l_OMrDYLnBEB1N5kA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "715619318132-094adv3v7u4u9truieie42fn0jrvfsdg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

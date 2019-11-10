@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeleteFacultyAccount">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/bar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/txtid"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/login_btn_background"
+            android:backgroundTint="@color/colorPrimary"
+            android:gravity="center"
+            android:hint="Enter Registration Id"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txterror"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Such Faculty Found"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/login_btn_background"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="deleteClicked"
+            android:paddingLeft="70dp"
+            android:paddingRight="70dp"
+            android:text="Delete Account"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <com.github.silvestrpredko.dotprogressbar.DotProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:layout_marginTop="35dp"
+            android:visibility="gone"
+            app:amount="5"
+            app:endColor="@color/colorPrimaryDark"
+            app:startColor="@color/colorPrimary" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

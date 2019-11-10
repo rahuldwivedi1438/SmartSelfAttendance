@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TakeAttendanceActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/bar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lecturedate_chooser"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/form_border"
+            android:gravity="center_vertical"
+            android:onClick="setDate"
+            android:padding="10dp"
+            android:spinnerMode="dialog"
+            android:text="Select Date"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/lecturetime_chooser"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/form_border"
+            android:spinnerMode="dialog" />
+
+        <Spinner
+            android:id="@+id/section_chooser"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/form_border"
+            android:spinnerMode="dialog" />
+
+        <Spinner
+            android:id="@+id/subject_chooser"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/form_border"
+            android:spinnerMode="dialog" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_btn_background"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="saveClicked"
+            android:paddingLeft="70dp"
+            android:paddingRight="70dp"
+            android:text="Save Details"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/login_btn_background"
+            android:backgroundTint="@color/colorPrimary"
+            android:visibility="gone"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="otpClicked"
+            android:paddingLeft="70dp"
+            android:paddingRight="70dp"
+            android:text="Take Attendance by OTP"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_qr"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_btn_background"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="qrClicked"
+            android:paddingLeft="70dp"
+            android:paddingRight="70dp"
+            android:text="Take Attendance by QR"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtotp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_btn_background"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:paddingLeft="70dp"
+            android:paddingRight="70dp"
+            android:text="OTP"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_done"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_btn_background"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="doneClicked"
+            android:paddingLeft="70dp"
+            android:paddingRight="70dp"
+            android:text="Done"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

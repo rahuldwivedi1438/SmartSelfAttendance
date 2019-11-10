@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddStudentActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/bar_layout" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="20dp"
+                android:src="@drawable/ic_person" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/editimagebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="-25dp"
+                android:layout_marginBottom="25dp"
+                android:layout_toEndOf="@id/profile_image"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:foreground="@drawable/edit_icon"
+                android:hapticFeedbackEnabled="true"
+                app:borderWidth="0dp"
+                app:fabSize="mini"
+                tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/txtid"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="@color/white"
+                android:hint="ID"
+                android:gravity="center"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/login_btn_background"
+                android:backgroundTint="@color/colorPrimary"
+                />
+
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/txtname"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/login_btn_background"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="10dp"
+                    android:hint="Enter Name"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+                <Spinner
+                    android:id="@+id/txtgender"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/txtname"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/login_btn_background"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:gravity="center"
+                    android:spinnerMode="dialog"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/txtsection"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/txtgender"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/login_btn_background"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/txtsection"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/login_btn_background"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="10dp"
+                    android:hint="Enter Email"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtdefaultpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/txtemail"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/login_btn_background"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="10dp"
+                    android:hint="Enter Password"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/txtdefaultpassword"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/login_btn_background"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:fontFamily="sans-serif-medium"
+                    android:onClick="saveClicked"
+                    android:paddingLeft="70dp"
+                    android:paddingRight="70dp"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+                <com.github.silvestrpredko.dotprogressbar.DotProgressBar
+                    android:id="@+id/progressbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/txtdefaultpassword"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    app:amount="5"
+                    android:visibility="gone"
+                    app:endColor="@color/colorPrimaryDark"
+                    app:startColor="@color/colorPrimary" />
+
+            </RelativeLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

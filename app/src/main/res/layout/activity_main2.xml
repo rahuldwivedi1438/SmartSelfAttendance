@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity">
+
+    <include layout="@layout/bar_layout"
+        android:id="@+id/toolbar"/>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@drawable/new_background"
+      android:gravity="center"
+      android:layout_below="@id/toolbar">
+
+      <Button
+          android:id="@+id/btn_take_attendance"
+          android:layout_width="wrap_content"
+          android:layout_height="50dp"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="20dp"
+          android:background="@drawable/login_btn_background"
+          android:backgroundTint="@color/colorPrimary"
+          android:fontFamily="sans-serif-medium"
+          android:onClick="takeAttendanceClicked"
+          android:paddingLeft="70dp"
+          android:paddingRight="70dp"
+          android:text="Take Attendance"
+          android:textAllCaps="false"
+          android:textColor="@color/white"
+          android:textSize="20sp" />
+      <Button
+          android:id="@+id/btn_view_attendance"
+          android:layout_width="wrap_content"
+          android:layout_height="50dp"
+          android:layout_below="@id/btn_take_attendance"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="20dp"
+          android:background="@drawable/login_btn_background"
+          android:backgroundTint="@color/colorPrimary"
+          android:fontFamily="sans-serif-medium"
+          android:onClick="viewAttendanceClicked"
+          android:paddingLeft="70dp"
+          android:paddingRight="70dp"
+          android:text="View Attendance"
+          android:textAllCaps="false"
+          android:textColor="@color/white"
+          android:textSize="20sp" />
+      <Button
+          android:id="@+id/btn_view_list"
+          android:layout_width="wrap_content"
+          android:layout_height="50dp"
+          android:layout_below="@id/btn_view_attendance"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="20dp"
+          android:background="@drawable/login_btn_background"
+          android:backgroundTint="@color/colorPrimary"
+          android:fontFamily="sans-serif-medium"
+          android:onClick="viewListClicked"
+          android:paddingLeft="70dp"
+          android:paddingRight="70dp"
+          android:text="View Student List"
+          android:textAllCaps="false"
+          android:textColor="@color/white"
+          android:textSize="20sp" />
+
+  </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".ReauthenticationActivity">
+    <include layout="@layout/bar_layout"
+        android:id="@+id/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@id/toolbar">
+        <EditText
+            android:id="@+id/adminpasswordtxt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/login_btn_background"
+            android:backgroundTint="@color/colorPrimary"
+            android:gravity="center"
+            android:inputType="textPassword"
+            android:hint="Enter Password"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txterror"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-5dp"
+            android:text="Invalid Password"
+            android:textColor="@android:color/black"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_varify"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/login_btn_background"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="varifyClicked"
+            android:paddingLeft="70dp"
+            android:paddingRight="70dp"
+            android:text="Varify"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <com.github.silvestrpredko.dotprogressbar.DotProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            android:layout_height="40dp"
+            app:amount="5"
+            android:visibility="gone"
+            app:startColor="@color/colorPrimary"
+            app:endColor="@color/colorPrimaryDark"
+            />
+
+        <Button
+            android:id="@+id/btn_resetpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="-5dp"
+            android:background="@drawable/login_btn_background"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="sans-serif-medium"
+            android:paddingLeft="70dp"
+            android:paddingRight="70dp"
+            android:onClick="resetClicked"
+            android:text="Forgot Password"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListingActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/bar_layout" />
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/txtsection"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_btn_background"
+            android:backgroundTint="@color/colorPrimary"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/txtsubject"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_btn_background"
+            android:backgroundTint="@color/colorPrimary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_show"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/layout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/login_btn_background"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="showClicked"
+        android:paddingHorizontal="50dp"
+        android:text="Show"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <com.github.silvestrpredko.dotprogressbar.DotProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@id/layout1"
+        android:layout_height="30dp"
+        app:amount="4"
+        app:startColor="@color/colorPrimary"
+        app:endColor="@color/design_default_color_primary_dark"
+        />
+
+    <TextView
+        android:id="@+id/txterror"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Data Found"
+        android:visibility="gone"
+        android:layout_below="@id/btn_show"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_show"
+        android:layout_marginTop="20dp"
+        tools:listitem="@layout/details_list_view" />
+
+</RelativeLayout>

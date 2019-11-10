@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_login_background"
+    tools:context=".ViewAttendance1Activity">
+
+    <include layout="@layout/bar_layout"
+    android:id="@+id/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/subject_chooser"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/white_form_border"
+            android:spinnerMode="dialog" />
+
+        <EditText
+            android:id="@+id/txtid"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:hint="Enter Student's ID"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:background="@drawable/white_form_border"
+            />
+
+        <Button
+            android:id="@+id/btn_show"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_btn_background"
+            android:backgroundTint="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:layout_gravity="center_horizontal"
+            android:onClick="showClicked"
+            android:paddingHorizontal="30dp"
+            android:text="Show"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+        <com.github.silvestrpredko.dotprogressbar.DotProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_height="40dp"
+            app:amount="4"
+            android:visibility="gone"
+            app:startColor="@color/white"
+            app:endColor="@android:color/darker_gray"
+            />
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        tools:listitem="@layout/attendance_view"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
